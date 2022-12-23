@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\dead_block\dead_block\bin\Debug\dead_block.exe.config
+C:\Users\User\source\repos\dead_block\dead_block\bin\Debug\dead_block.exe
+C:\Users\User\source\repos\dead_block\dead_block\bin\Debug\dead_block.pdb
+C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.Form1.resources
+C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.Properties.Resources.resources
+C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.csproj.GenerateResource.cache
+C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.exe
+C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.pdb
