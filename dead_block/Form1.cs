@@ -31,5 +31,22 @@ namespace dead_block
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Load_Game(object sender, EventArgs e)
+        {
+            GameScreen gamewindow = new GameScreen();
+            gamewindow.Show();
+        }
+
+        private void load_help(object sender, EventArgs e)
+        {
+            HelpScreen hwindow = new HelpScreen();
+            hwindow.Show();
+        }
     }
 }
