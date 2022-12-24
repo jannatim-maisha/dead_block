@@ -64,6 +64,8 @@ namespace dead_block
                 player.Top += speed;
             }
 
+
+
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
@@ -96,7 +98,7 @@ namespace dead_block
 
                 if (ammo < 1)
                 {
-                  //  DropAmmo();
+                    DropAmmo();
                 }
             }
 
@@ -152,6 +154,25 @@ namespace dead_block
             shootBullet.bulletLeft = player.Left + (player.Width / 2);
             shootBullet.bulletTop = player.Top + (player.Height / 2);
             shootBullet.MakeBullet(this);
+        }
+
+
+        private void DropAmmo()
+        {
+
+            PictureBox ammo = new PictureBox();
+            ammo.Image = Properties.Resources.ammo_Image;
+            ammo.SizeMode = PictureBoxSizeMode.AutoSize;
+            ammo.Left = randNum.Next(10, this.ClientSize.Width - ammo.Width);
+            ammo.Top = randNum.Next(60, this.ClientSize.Height - ammo.Height);
+            ammo.Tag = "ammo";
+            this.Controls.Add(ammo);
+
+            ammo.BringToFront();
+            player.BringToFront();
+
+
+
         }
 
         private void MakeZombies()
