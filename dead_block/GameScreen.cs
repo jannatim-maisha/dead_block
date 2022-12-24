@@ -12,9 +12,186 @@ namespace dead_block
 {
     public partial class GameScreen : Form
     {
+
+        bool goLeft, goRight, goUp, goDown, gameOver;
+        string facing = "up";
+        int playerHealth = 100;
+        int speed = 10;
+        int ammo = 10;
+        int zombieSpeed = 3;
+        Random randNum = new Random();
+        int score;
+        List<PictureBox> zombiesList = new List<PictureBox>();
+
+
+
+
         public GameScreen()
         {
             InitializeComponent();
         }
+
+        private void MainTimerEvent(object sender, EventArgs e)
+        {
+            if (playerHealth > 1)
+            {
+                healthBar.Value = playerHealth;
+            }
+            else
+            {
+                gameOver = true;
+                player.Image = Properties.Resources.dead;
+                GameTimer.Stop();
+            }
+
+            txtammo.Text = "Ammo: " + ammo;
+            txtscore.Text = "Kills: " + score;
+
+            if (goLeft == true && player.Left > 0)
+            {
+                player.Left -= speed;
+            }
+            if (goRight == true && player.Left + player.Width < this.ClientSize.Width)
+            {
+                player.Left += speed;
+            }
+            if (goUp == true && player.Top > 45)
+            {
+                player.Top -= speed;
+            }
+            if (goDown == true && player.Top + player.Height < this.ClientSize.Height)
+            {
+                player.Top += speed;
+            }
+
+        }
+
+        private void KeyIsUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = false;
+            }
+
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = false;
+            }
+
+            if (e.KeyCode == Keys.Up)
+            {
+                goUp = false;
+            }
+
+            if (e.KeyCode == Keys.Down)
+            {
+                goDown = false;
+            }
+
+            if (e.KeyCode == Keys.Space && ammo > 0 && gameOver == false)
+            {
+                ammo--;
+                ShootBullet(facing);
+
+
+                if (ammo < 1)
+                {
+                  //  DropAmmo();
+                }
+            }
+
+            if (e.KeyCode == Keys.Enter && gameOver == true)
+            {
+                RestartGame();
+            }
+
+        }
+
+        private void KeyIsDown(object sender, KeyEventArgs e)
+        {
+            if (gameOver == true)
+            {
+                return;
+            }
+
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = true;
+                facing = "left";
+                player.Image = Properties.Resources.left;
+            }
+
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = true;
+                facing = "right";
+                player.Image = Properties.Resources.right;
+            }
+
+            if (e.KeyCode == Keys.Up)
+            {
+                goUp = true;
+                facing = "up";
+                player.Image = Properties.Resources.up;
+            }
+
+            if (e.KeyCode == Keys.Down)
+            {
+                goDown = true;
+                facing = "down";
+                player.Image = Properties.Resources.down;
+            }
+
+
+        }
+
+        private void ShootBullet(string direction)
+        {
+          
+        }
+
+        private void MakeZombies()
+        {
+            PictureBox zombie = new PictureBox();
+            zombie.Tag = "zombie";
+            zombie.Image = Properties.Resources.zdown;
+            zombie.Left = randNum.Next(0, 900);
+            zombie.Top = randNum.Next(0, 800);
+            zombie.SizeMode = PictureBoxSizeMode.AutoSize;
+            zombiesList.Add(zombie);
+            this.Controls.Add(zombie);
+            player.BringToFront();
+
+        }
+
+        private void RestartGame()
+        {
+            player.Image = Properties.Resources.up;
+
+            foreach (PictureBox i in zombiesList)
+            {
+                this.Controls.Remove(i);
+            }
+
+            zombiesList.Clear();
+
+            for (int i = 0; i < 3; i++)
+            {
+                MakeZombies();
+            }
+
+            goUp = false;
+            goDown = false;
+            goLeft = false;
+            goRight = false;
+            gameOver = false;
+
+            playerHealth = 100;
+            score = 0;
+            ammo = 10;
+
+            GameTimer.Start();
+        }
+
     }
 }

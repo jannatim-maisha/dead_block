@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bullet.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameScreen.resx">
+      <DependentUpon>GameScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpScreen.resx">
       <DependentUpon>HelpScreen.cs</DependentUpon>
@@ -106,6 +110,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\key.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ammo-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zup.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

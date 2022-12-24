@@ -9,3 +9,4 @@ C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.csproj.Cor
 C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.exe
 C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.pdb
 C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.HelpScreen.resources
+C:\Users\User\source\repos\dead_block\dead_block\obj\Debug\dead_block.GameScreen.resources
