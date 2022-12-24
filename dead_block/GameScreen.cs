@@ -217,6 +217,26 @@ namespace dead_block
 
         }
 
+        private void GameScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optionsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void restartToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RestartGame();
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void ShootBullet(string direction)
         {
             Bullet shootBullet = new Bullet();
@@ -280,6 +300,7 @@ namespace dead_block
             goLeft = false;
             goRight = false;
             gameOver = false;
+            facing = "up";
 
             playerHealth = 100;
             score = 0;
