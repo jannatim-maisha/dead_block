@@ -237,6 +237,11 @@ namespace dead_block
             Application.Exit();
         }
 
+        private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("LEFT RIGHT UP DOWN ARROW BUTTONS TO MOVE AND PRESS SPACE TO SHOOT.WHEN GAME IS OVER PRESS ENTER TO RESTART.");
+        }
+
         private void ShootBullet(string direction)
         {
             Bullet shootBullet = new Bullet();
