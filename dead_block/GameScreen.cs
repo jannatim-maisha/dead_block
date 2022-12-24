@@ -64,9 +64,22 @@ namespace dead_block
                 player.Top += speed;
             }
 
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "ammo")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        this.Controls.Remove(x);
+                        ((PictureBox)x).Dispose();
+                        ammo += 5;
+
+                    }
+                }
+            }
 
 
-        }
+            }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
