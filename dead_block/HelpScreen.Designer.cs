@@ -29,6 +29,7 @@ namespace dead_block
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpScreen));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -37,22 +38,22 @@ namespace dead_block
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(81, 9);
+            this.label1.Location = new System.Drawing.Point(13, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 195);
+            this.label1.Size = new System.Drawing.Size(518, 270);
             this.label1.TabIndex = 0;
-            this.label1.Text = "GAME HELP SCREEN\r\n\r\nWELCOME TO DEAD BLOCK!!!\r\nTO PLAY THIS GAME YOU HAVE TO USE T" +
-    "HE KEYBOARD BUTTONS.\r\n\r\nW S A D TO MOVE AND PRESS SPACE TO SHOOT.\r\n\r\nGAME DEVELO" +
-    "PER- JANNATIM MAISHA\r\n";
+            this.label1.Text = resources.GetString("label1.Text");
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::dead_block.Properties.Resources.key;
-            this.pictureBox1.Location = new System.Drawing.Point(96, 207);
+            this.pictureBox1.Image = global::dead_block.Properties.Resources.f;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 292);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(201, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,7 +67,7 @@ namespace dead_block
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::dead_block.Properties.Resources._1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(432, 304);
+            this.ClientSize = new System.Drawing.Size(643, 406);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));

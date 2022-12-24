@@ -34,8 +34,8 @@ namespace dead_block
             this.txtscore = new System.Windows.Forms.Label();
             this.txthealth = new System.Windows.Forms.Label();
             this.healthBar = new System.Windows.Forms.ProgressBar();
-            this.player = new System.Windows.Forms.PictureBox();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
+            this.player = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,28 +80,29 @@ namespace dead_block
             this.healthBar.TabIndex = 4;
             this.healthBar.Value = 100;
             // 
-            // player
-            // 
-            this.player.Image = global::dead_block.Properties.Resources.up;
-            this.player.Location = new System.Drawing.Point(414, 339);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(71, 100);
-            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.player.TabIndex = 5;
-            this.player.TabStop = false;
-            // 
             // GameTimer
             // 
             this.GameTimer.Enabled = true;
             this.GameTimer.Interval = 20;
             this.GameTimer.Tick += new System.EventHandler(this.MainTimerEvent);
             // 
+            // player
+            // 
+            this.player.Image = global::dead_block.Properties.Resources.up;
+            this.player.Location = new System.Drawing.Point(418, 504);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(71, 100);
+            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.player.TabIndex = 5;
+            this.player.TabStop = false;
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(887, 440);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(887, 606);
             this.Controls.Add(this.player);
             this.Controls.Add(this.healthBar);
             this.Controls.Add(this.txthealth);

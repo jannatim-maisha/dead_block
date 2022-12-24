@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>GAME HELP SCREEN
+
+WELCOME TO DEAD BLOCK!!!
+TO PLAY THIS GAME YOU HAVE TO USE THE KEYBOARD BUTTONS.
+
+LEFT RIGHT UP DOWN ARROW BUTTONS TO MOVE AND PRESS SPACE TO SHOOT.
+WHEN GAME IS OVER PRESS ENTER TO RESTART.
+
+GAME DEVELOPER- JANNATIM MAISHA
+</value>
+  </data>
 </root>
